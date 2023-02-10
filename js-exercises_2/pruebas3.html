@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <script>
+        function add7 (){
+            let num7 = prompt("Escribe un numero");
+            x = Number(num7)
+            alert(x + 7);
+        }
+
+        function multiply(){
+            let x = prompt("Escribe un numero", '');
+            let y = prompt("Escribe otro numero", '');
+
+            let mul = x * y;
+            alert(mul);
+        }
+
+        function capitalize(){
+            let cad = prompt("Escribe lo que quieras: ",'');
+            //Primero se debe de separar la primera letra para dejarla en mayuscula
+            //Despues utilizando substring se empieza con la letra siguiente y dejando de limite
+            //  la totalidad del string
+            let x = cad.toUpperCase().charAt(0) + cad.substring(1, cad.length).toLowerCase();
+            alert(x);
+        }
+
+        function lastLetter() {
+            let n = prompt("Escribe lo que quieras", '');
+            //solucion bastante sencilla, solotengo que restarle al string 1 para que me de
+            //  la ultima letra
+            let ultimaLetra = n.charAt(n.length - 1);
+            alert(ultimaLetra);
+        }
+
+        function fizzBuzz(){
+            let answ = parseInt(prompt("Por favor escribe el numero por el cual quieres jugar: "));
+            for (let i = 1; i <= answ; i++){
+                //si se requiere de que imprima con la condicion de 3
+                if(i % 3 === 0 && i % 5 === 0){
+                    console.log("-- FizzBuzz --");
+                }else if(i % 3 === 0){
+                    console.log("Fizz");
+                }else if(i % 5 === 0){
+                    console.log("Buzz");
+                }else{
+                    console.log(i);
+                }
+            }
+        }
+        fizzBuzz();
+    </script>
+</body>
+</html>

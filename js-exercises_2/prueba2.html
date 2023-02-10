@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>press me</button>
+
+    <script>
+        const button = document.querySelector("button");
+
+        function greet(){
+            const name = prompt("what is your name?");
+            alert(`Hello ${name}, nice to see you!`);
+        }
+
+        button.addEventListener("click", greet);
+
+
+        // * * * * * * * concatenar * * * * * * *
+        const greeting = "Hello";
+        const names = "Chris";
+        console.log(greeting + ", " + names);
+        //   los literales de plantilla generalmente le brindan un código más legible
+        console.log(`${greeting}, ${names}`);
+        
+        // numeros vs cadenas (concatenar)
+        const name = "Front ";
+        const number = 242;
+        console.log(`${name}${number}`);
+
+            //La Number()función convierte todo lo que se le pasa en un número, si es posible.
+            const myString = "123";
+            const myNum = Number(myString);
+            console.log(typeof myNum);
+
+            //cada número tiene un método llamado toString()
+            //que lo convierte en la cadena equivalente. 
+            const myNum2 = 123;
+            const myString2 = myNum2.toString();
+            console.log(typeof myString2);
+
+            const song = "Fight the Youth";
+            const score = 9;
+            const highestScore = 10;
+            const outputs = `I like the song ${song}. I gave it a score of ${
+              (score / highestScore) * 100
+            }%.`;
+            console.log(outputs);
+    </script>
+</body>
+</html>
